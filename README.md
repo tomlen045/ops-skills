@@ -8,7 +8,17 @@ English | [简体中文](README.zh-CN.md)
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/tomlen045/ops-skills/main/install.sh)"
 ```
 
-**One command. 10 skills. Zero configuration.**
+**One command. 10 skills. Zero configuration.** (Unreachable network? The installer auto-falls back to the jsDelivr CDN mirror.)
+
+### Install modes
+
+| Mode | What you get | Best for |
+|------|-------------|----------|
+| 1) **Native skills** → `~/.claude/skills/<name>/SKILL.md` | Auto-activating skills with trigger descriptions | Claude Code v2+ and any harness that reads SKILL.md (Codex, Cursor, Pi…) — **recommended** |
+| 2) Single-file `CLAUDE.md` | All 10 skills concatenated into one context file | Claude Code v1, manual control |
+| 3) `.cursorrules` | Same, in Cursor's format | Cursor users |
+| 4) Both 2+3 | — | Mixed setups |
+| 5) Plain download | `./ops-skills/*.md` | Everything else |
 
 ## The Problem
 

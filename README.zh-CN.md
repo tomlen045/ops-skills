@@ -41,7 +41,17 @@ AI 编程助手写 React 组件很厉害，但你让它审查 Kubernetes 安全�
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/tomlen045/ops-skills/main/install.sh)"
 ```
 
-交互式脚本会检测你用的是 Claude Code 还是 Cursor，自动安装对应格式。
+> 国内网络 raw.githubusercontent.com 连不上？脚本会自动切换 jsDelivr CDN 镜像，无需梯子。
+
+安装脚本提供 5 种模式：
+
+| 模式 | 装到哪 | 适合谁 |
+|------|-------|--------|
+| 1) **原生技能** → `~/.claude/skills/<名称>/SKILL.md` | 带触发描述的技能包，AI 自动判断何时调用 | Claude Code v2+ 及一切读 SKILL.md 的 Agent（Codex、Cursor、Pi…）——**推荐** |
+| 2) 单文件 `CLAUDE.md` | 10 个技能合并成一份上下文文件 | Claude Code v1、喜欢手动控制的 |
+| 3) `.cursorrules` | 同上，Cursor 格式 | Cursor 用户 |
+| 4) 2+3 都要 | — | 混合环境 |
+| 5) 仅下载 | `./ops-skills/*.md` | 其他用法 |
 
 ### 手动
 
